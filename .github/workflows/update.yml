@@ -2,10 +2,11 @@ name: Hourly file update
 
 on:
   schedule:
-    # Каждый час (минута 0)
     - cron: '0 * * * *'
-  # Для ручного запуска (опционально)
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   process:
